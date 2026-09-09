@@ -5,17 +5,69 @@
         
        What is HTML ?
 
-       -> HTML is used to create the structure and content of web pages.
+       -> HTML is used to create the structure and content of web page  and it will display the content
 
           For example, HTML tells the browser:
           
-          This is a heading
+          This is a heading  --- 
           This is a paragraph
           This is an image
           This is a link
           This is a list
           This is a table
+          Display a form
    
    NOTE: HTML is not a programming language. It is a markup language.
 
-       ->
+       -> Features of html
+
+            -- it is a easy language to learn -- beginners  can create webpages quickly
+            -- Platform independent -- it can run on different OS such as windows , linux , Mac
+            -- Create a webpage structure
+            -- Supports multimedia  -- we can display images , audio and video
+            -- Creates hyperlinks - it will allow a user to navigate between webpages
+            -- works with CSS 
+            -- Works with js
+       
+   Structure of HTML  
+
+   -- In HTML every thing is treated as TAG 
+      <>( open angular bracket) -- open tag
+      </>(closed angualr bracket) -- close tag
+       
+     <!DOCTYPE html>   -- it will tell the browser the doctype is html (on a browser every web page is treated as document and its type is html)
+          <html> -  in between this html tag we goona define our web page details and content (root of the page from where we start writing)
+                <head> 
+                     <title></title> - we define our title of the page / we gonna store deatils/info about our web page
+                </head>
+                <body>   -- body tell the web page what to display
+                      <h1>
+
+                </body>
+         </html>
+
+
+ -- we write html code inside a file and it should be stored with an extenstion .html
+
+ -- comments in html  
+ syntax/structure is 
+      <!-- -->
+
+      --> Tags in HTML  
+           
+           <title></title> -- it will add name to our browser tab
+           <h1></h1> -- heading tag/h1 tag used to write heading on our web pages
+           <h2></h2>
+           <h3></h3>
+           <h4></h4>
+           <h5></h5>
+           <h6></h6>
+       <p></p> -- paragraph / p tag
+ 
+ --> HTML Elements
+  it defines a complete structure of a tag
+      <h2>my page</h2> -- open tag  content close tag
+      <h2></h2>
+
+ ---> HTML Attribute
+          
