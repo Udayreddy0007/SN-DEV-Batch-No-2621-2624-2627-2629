@@ -1,0 +1,21 @@
+---- Date: 09/09/26
+
+
+--> HTML : Hypertext Markup Language 
+        
+       What is HTML ?
+
+       -> HTML is used to create the structure and content of web pages.
+
+          For example, HTML tells the browser:
+          
+          This is a heading
+          This is a paragraph
+          This is an image
+          This is a link
+          This is a list
+          This is a table
+   
+   NOTE: HTML is not a programming language. It is a markup language.
+
+       ->

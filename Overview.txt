@@ -1,0 +1,54 @@
+---- Date: 8/09/26 
+  
+   --> entire course duration is  min 1 month max 45 days
+
+   SN - DEVELOPMENT Overview
+  
+   HTML - what is html , how to create table , form , few tags
+   CSS -  Styling the pages  , selectors , properties and their values
+   JS - focusing more on javascript  - 
+       --> Intro to js and how we use it inside servicenow ,
+     --> Data & datatypes
+      --> variables & rules 
+      --> control statements
+      -->looping control statements
+      --> functions
+      --> array
+      --> objects
+      --> methods
+
+   SN -SCRIPTING 
+
+   Intro  - Overview
+   Client Scripts -
+   Server Scripts -
+   Business rules
+   Glide Ajax  --  
+   Script include  
+   Glide APIs
+   Glide methods
+
+
+
+-->  Environment :
+                   IDE (integrated  development Environment)
+
+    --> Vs code an IDE Where we gonna write  our code 
+        Lightweight
+
+    --> Installation :
+        
+           link :  https://code.visualstudio.com/download?_exp_download=fb315fc982
+
+           Download based on your OP 
+
+
+
+           
+
+        
+
+
+
+
+
