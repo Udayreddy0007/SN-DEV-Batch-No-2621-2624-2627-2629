@@ -69,5 +69,45 @@
       <h2>my page</h2> -- open tag  content close tag
       <h2></h2>
 
- ---> HTML Attribute
+
+--> Date : 10/09/26
+
+ ---> HTML Attribute : An  attribute which  gives an additional info or properties about  a value
+
+          -- Which is written inside a open tag 
+                    <we write a attribute>
+          ex :  
+
+     -- <a href="paste / add a link"> Link text</a>  --- it is a anchor tag which is used to create a hyperlink
+              href = attribute 
+              this href contains link / attribute value 
+              
+      -- <img src =""   alt > -- src defines from which address the image is uploaded
+          alt -- some the image may not get load on our webpage inthat case we have to
+          give a name 
+     
+--> we can create a list using  using two tags
+
+    1. <ol></ol> -- ordered list  -- when a sequence is mandatory we use ordered list
+    2.<ul></ul> -- unordered list -- when sequence is doesnt matters we use unordered list
+    3.<li></li>-- list items  --- adding the info list deatils
+
+
+    ex :
+          <ol>
+            <li>Apple</li>
+            <li>Banana</li>
+          </ol>    
+
+---> We can create a table using html tags those are
+
+     <table></table> -- to create a table
+     <th></th> -- table headings / column headings
+     <tr></tr> -- to create a row on table
+     <td></td> -- to inser the data inside a row we gonna use table data  
+
+
+
+             
+
           
