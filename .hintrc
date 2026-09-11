@@ -5,6 +5,8 @@
   "hints": {
     "axe/language": "off",
     "axe/text-alternatives": "off",
-    "axe/name-role-value": "off"
+    "axe/name-role-value": "off",
+    "axe/forms": "off",
+    "button-type": "off"
   }
 }

@@ -108,6 +108,17 @@
 
 
 
-             
+  --> Date: 11/09/26
+
+  --> How to create a form using HTML
+
+       We use form tag to create a form 
+       <form> --- Create form structure
+       </form>
+       <label></label> -- used to display the name of the field
+       <input type="text" name =""> -- it creates a field where a user can write
+       
+       <br> --- it will tell the tag move to the next line
+       <button> </button> --- to create a button 
 
           

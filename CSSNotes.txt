@@ -1,0 +1,26 @@
+
+
+--> Date : 11/09/26
+  
+  --> CSS : Cascading stylesheet 
+            to style our webpage to make it interactive/ for decorating our pages
+    -- We have properties same like tags in html
+
+    -- properties in CSS
+       Color , Back-ground color,text-color , text-align,
+       alignment ,font-size . font-color , font-family 
+       Box model - width , length , margin.padding
+
+    -- For color properties we use RBG -- (Red , Blue , Green)
+    -- Each color has a color code
+
+--> CSS can be written in three ways
+
+1.Inline CSS  --  the css code which is written inside an html open tag
+               
+    -- syntax :
+                 <h1 style="color:red; back-groundcolor: green"></h1>
+            
+2.Internal CSS -- We can apply css on the html page the code should written inside the head using
+                 <style></style>
+3.External CSS --
