@@ -23,4 +23,57 @@
             
 2.Internal CSS -- We can apply css on the html page the code should written inside the head using
                  <style></style>
-3.External CSS --
+
+3.External CSS -- We create a separate file and the file should be saved with .css extenstion
+                 then that file is linked to the html page on which we gonna apply the style
+                 we use <link> to link the css with html inside the html head tag
+                   
+                syntax : |
+                      <link  rel="stylesheet" href="filename.css" >
+                      
+                      -- rel - tells the browser the relation
+                      -- href - specifies the address of the file / create a hyperlink  
+
+--> Date: 15/09/26
+
+
+  --> Css properties:
+        
+        text-alignment -  it tells where our text should be displayed either on center , right,left.
+
+        --> CSS Selectors : This selctors basically used to apply the style on the 
+                             Html element that you want
+             
+             1.Id Selectors (#) - we give an id / a name on that id we apply the styles
+                           
+                           ex :  <h1 id = "first">INCIDENT FORM</h1>
+                           inside the css we write
+                              
+                               #first{
+                                    property: value;
+                               }
+                              
+
+             2.Class name Selectors(.) : we give a name but it is used when you want to apply on a group
+                   ex : <body class ="msg" >
+                      inside the css 
+                        .msg{
+                            property: value;
+                        }
+
+             3.Element Selectors - we basically use tags and directly apply the properties
+            
+             4.Universal  Selectors (*) - this will applies the style to the every element
+               
+                          ex : *{
+                                      margin: 0;
+
+                                }
+            5.Grouping Selectors - we can select multiple elements
+                                  at the same time
+                     ex: 
+                           h1,body{
+                                 property: value; 
+                           }
+                 
+ 

@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+.important{
+        background-color: rgb(223, 217, 33);
+    }
+    #h1{
+        color:black;
+    }
+    #ok{
+        color:rgb(9, 240, 232);
+        text-align: center;
+    }
+    form{
+        text-align: center;
+    }
+    p{
+       color:rgb(18, 17, 17);
+       text-align: end; 
+    }
