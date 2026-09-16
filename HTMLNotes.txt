@@ -121,4 +121,8 @@
        <br> --- it will tell the tag move to the next line
        <button> </button> --- to create a button 
 
+
+       div -- it is treated as a container
+                 <div></div>
+
           

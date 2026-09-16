@@ -1,0 +1,34 @@
+
+---> Date : 16/09/26
+
+What is JS ? and what it does to a page :
+   -- its a programming language
+   -- its both server side and client side language
+   -- to manage the behaviour and tto write the business logic we  use java script.
+
+    -- form validation , passwords checking , button events.
+    -- used to make web page interactive 
+
+    How js is used in SN ?
+
+    -- To write the business logic and managing the behaviour , processing  the data and fetching the data 
+        we gonna use JS in Sn we write scripts
+
+        We have two consoles in SN
+        
+        -- Client side  : browser lvl
+         CRUD / CRED
+           Onload , on change , on submit , on celledit
+ 
+        -- Server side : DB lvl
+          DML operations
+          Glide API's
+          Glide methods
+          Glide objects
+          Glide Ajax
+          Business rules
+          Script includes
+
+
+
+

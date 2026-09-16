@@ -75,5 +75,12 @@
                            h1,body{
                                  property: value; 
                            }
+
+      
+      ---> Date : 16/9/26
+
+       CSS Box model:
+                  
+              margin , padding, width , border , content
                  
  
