@@ -30,5 +30,88 @@ What is JS ? and what it does to a page :
           Script includes
 
 
+---> Date: 17/9/26
+     
+     -->Features :
+
+        -- lighweight code
+        -- it is platform independent language 
+        -- it supports Object-oriented language 
+        -- event-driven -buttonevents , mouse events
+        -- it run on both server side and client side
+
+    -- Scripts , logic , business logics
+
+ Js - it can be written inside html and out side html 
+  
+  there are two way to write JS
+  
+  1.internal JS : inside the html body we gonna write the logic by using <script></script>
+  2.External JS : we create a seperate file and it should be stored with .js extention
+                  and linked with html by using script tag inside the body
+
+  --> What is data ?
+       
+       --- which contains information 
+           name  , channel ids, age , email
+        
+  --> which type of data it is ?
+
+  name : uday - characters / alphabets
+  phnno: 9848512199 - numbers / numeric digits 
+
+  Data types 
+
+  --> every data as information about something and the data will be in different format / either it may be in the digits , alphabets ,true
+      false like this
+
+    5 data types in JS :
+
+  1. int(integer data type) - the information/data is in the form of whole numbers
+    
+       ex : phnno: 952535192;
+  
+  2. decimal: if a number as more than 2 percision values we consider that as decimal data types if the 
+               number length is more than 15 by default js consider it as decimal datatype
+      ex: percentage : 99.98%
+          Total bill : 1025.00345637389;
+
+  3.Float : if a number as 1 percision value we consider it as float data type the  length is  5 to 7
+      
+      ex: population : 144.1;  
+
+  4. String :  group of letters,characters , combination of letters and numbers and the data should be decalred it btw
+              double quotes ("stringdata")
+   
+   ex :  name : uday ;
+               "uday";
+         id : "21M91A0511"
+  
+  5. Boolean (True/false ): it will check the conditions 
+       
+       ex: he/she is 18 and eligible to vote -- true
+           he/she is 16 and major -- false
+      
+      -- computerunderstanding only the machine langauge (0 and 1)
+      -- 0 is treated as true 
+      -- 1 is treated as false
+      -- yes / no
+  
+  ---> output statement : the statement / code which is written to diaplay the output
+    
+     console.log();
+
+     console.log(name);
+     
+   
+    -- when we move on the SN platform there the output is different 
+     
+      gs.info / gs.print
+
+
+         
+
+
+
 
 
