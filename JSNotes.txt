@@ -109,6 +109,85 @@ What is JS ? and what it does to a page :
       gs.info / gs.print
 
 
+---> Date : 18/9/26
+
+   --> Variable : it is a container which stores different types of data and that different types of 
+                  data is stored inside a name that name we call it as variable name
+
+                  marks = 90;
+                  marks -- variable name / container 
+                  90 -- is the int type data
+
+    varaible naming rules in JS
+
+      -- a variable name can starts with _ or $ or character but not numbers
+        
+            ex : id = "2134A";
+                 1id ="2134A";
+                 _id="2134A";
+                 $id="2134A";
+                 #id ="2134A";
+    
+    -- a variable name cannot be a default names 
+      
+      ex : for , if , count ,...... etc
+
+    --- JS uses camelCase naming convention for writing a variable names
+           
+           ex : stdName ="Shubash";
+   
+    -- variable name cannot contains any spaces
+      
+        ex : std_Name 
+             std Name 
+             s tdName
+             StdName
+
+  
+  ---> Variable keywords :
+   
+       -- In JS we have three  variable keywords
+         
+         1.let -- it is a block scope variable  the value can be updated 
+                    but we cannot redecalre the variable
+         
+         2.var -- it is a global scope variable the value can be updated and redecalration
+
+         3.const -- it is a block scope variable the values cannot be updated and redecalred
+
+
+   -- JS is a case sensitive language 
+      
+      ex : name & Name  -- same meaning , spelling but act differently
+
+       -- Syntax : 
+                   varaible keyword variableName = value / type of the data / data ;
+
+
+--> Operators : Operators are used to perform calculations , to check the conditions, compare the things we gonna use Operators
+
+     There are  operators inside the JS 
+
+     1.Arithmatic : for maths calculations
+        (+ , - , / , % ,* )
+    
+    2.Compound Assignment / Assignment operators - this operators are the combinations of = and Arithmatic
+
+         (+= , -=, /= ,%=,*=,**, ***)
+
+    3.Comparison Operators - To compare the values we gonna use this Operators
+       (<, >, <=, >=, ==, === , !=)
+
+    4.Logical operators - To check the conditions
+
+       AND (&&)
+       OR(||)
+       NOT(!)  
+
+    5.increment/decrement - (++ , --)          
+
+
+
          
 
 
