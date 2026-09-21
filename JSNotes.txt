@@ -169,14 +169,73 @@ What is JS ? and what it does to a page :
      There are  operators inside the JS 
 
      1.Arithmatic : for maths calculations
-        (+ , - , / , % ,* )
+        (+ , - , / , % ,* ) --
+           
+          --> +  :  var a = 15;
+                b = 16; //  output will be 31
+                result= a + b ;
+               console.log("The addition of two :"+result);
+
+
+          --> - :   var a = 15;
+                   b = 16; //  output will be -1
+                   result= a - b ;
+                  console.log("The Substraction  of two :"+result);
+
+         -->  / : 
+                 var a = 15;
+                b = 16; //  output will be 0.93 
+                result= a / b ;
+               console.log("The Division of two :"+result);
+
+         --> % : 
+                     var a = 5 ;
+                     b = 10; //  output will be 5 
+                     result= a + b ;
+                     console.log("The modulo of two :"+result);
+
+        --> * : 
+                     var a = 15;
+                    b = 16; //  output will be 240
+                    result= a + b ;
+                    console.log("The Multiplication  of two :"+result);
+                     
     
     2.Compound Assignment / Assignment operators - this operators are the combinations of = and Arithmatic
 
-         (+= , -=, /= ,%=,*=,**, ***)
+         (+= , -=, /= ,%=,*=)
+
+      --> 
+                var a = 15;
+                a+=2; // 17  
+                a-=3; // 14
+                a*=4; //56 
+                a /=4; //14
+                a %= 7; // 0
+                console.log(a);
+
+    --> Ternary Operators --- **
+
+      ** -- i want to find  2 square , cube, quadartic .............
+         
+          2 ** 2 ;
+          3 ** 4 ;
+          4 ** 5 ;
+
 
     3.Comparison Operators - To compare the values we gonna use this Operators
-       (<, >, <=, >=, ==, === , !=)
+       (<, >, <=, >=, ==, === , !=) - true / false
+        
+        == : 
+              is used to compare two values 
+               
+         a = 10 ;
+         b = 10;
+         c = a == b; // 10 == 10 // true
+         // 10 == 20// false
+
+
+
 
     4.Logical operators - To check the conditions
 
