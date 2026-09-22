@@ -168,6 +168,8 @@ What is JS ? and what it does to a page :
 
      There are  operators inside the JS 
 
+--> 21/09/26 -- Exapmles for arithmatic , assignment , comparison 
+
      1.Arithmatic : for maths calculations
         (+ , - , / , % ,* ) --
            
