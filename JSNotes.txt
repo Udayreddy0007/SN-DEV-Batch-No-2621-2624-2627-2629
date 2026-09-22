@@ -168,8 +168,6 @@ What is JS ? and what it does to a page :
 
      There are  operators inside the JS 
 
---> 21/09/26 -- Exapmles for arithmatic , assignment , comparison 
-
      1.Arithmatic : for maths calculations
         (+ , - , / , % ,* ) --
            
@@ -231,21 +229,128 @@ What is JS ? and what it does to a page :
         == : 
               is used to compare two values 
                
-         a = 10 ;
+         var a = 10 ;
          b = 10;
-         c = a == b; // 10 == 10 // true
+         c = a == b; // 10 == 10 // True
          // 10 == 20// false
 
+     === :
+         
+         a = 10;
+         b="10"; 
+         compare the value also check the type of Data
+          // false
+          exact Comparison
+          a === b
+
+    != : 
+          a= 10 ;
+          b = 20;
+           a != b; // true
 
 
 
-    4.Logical operators - To check the conditions
 
-       AND (&&)
-       OR(||)
-       NOT(!)  
 
-    5.increment/decrement - (++ , --)          
+    4.Logical operators - To check the conditions output in the form as true or false
+
+       AND (&&) -- we have conditions 
+                                 cond1(He/she age is 18 and we can treat them ar majaor) = true;
+                                 cond2 (he/she is eligible to vote) = true;
+                                 if and only if both cond are true then only get output as True
+      
+       OR(||) -- if the fst or the second is true then get output as true
+       
+       NOT(!) -- reverse  
+           cond1 = true; -- he /she age is 18 and we can treat them major
+          console.log(!cond1);
+
+    5.increment/decrement - (++ , --)  --- 
+
+       increment -- it add +1 to the original value
+             var a = 10 ;
+              a++ // -- a + 1 =10 +1 = 11
+      
+       decrement --     it subtract -1 from the original value
+
+          var b = 20;
+            b--; // -- b - 1 = 20-1 = 19
+
+--> Date: 22/9/26
+
+  --- we have seen examples on Comparison , logical & Inc , dec operators
+
+
+  --- Control Statements / Conditional statements :
+    
+      A block of code is executed when the conditions are matched / true -- block of code
+
+      {
+           // block code // console.log()
+      }
+
+      there are few types of ctrl stmts or cond stmts in JS they are
+
+      1. if conditional statement  --
+        
+        syntax/ structure :
+                     
+                     if(cond){
+                         // true statement executed if the condition is true // true block
+                     }
+      2. if else statement --
+           syntax / structure :
+             
+              if(cond){
+                   //true block
+              }
+              else{
+                   // false block / default block
+              }
+
+      3. else if statement : 
+              
+              syntax/structure: 
+
+                 if(cond1){
+                    //true block
+                 }
+                 else if(cond2){
+                    // false block
+                 }
+                 else{
+                     // default block
+                 }
+           
+      4 . nested else if : 
+                    we can write multiple else if
+
+                    syntax/structure:
+
+                    if(cond1)
+                    {
+                         //true block 
+                    }
+                    else if(cond2)
+                    {
+                         // false block
+                    }
+                    else if(cond3){
+                         // false block
+                    }
+                    else if(cond4){
+                         // false block
+                    }
+                    else{
+                         // default block
+                    }
+
+      5.nested if
+   
+    
+     
+            
+
 
 
 
