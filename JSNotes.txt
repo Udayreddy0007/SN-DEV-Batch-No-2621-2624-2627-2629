@@ -345,7 +345,76 @@ What is JS ? and what it does to a page :
                          // default block
                     }
 
-      5.nested if
+      5.nested if : 
+       
+--> Date : 23/9/26
+
+  5. nested if :
+                
+  syntax :
+              if(cond1)
+                  {
+                          // stmt 1 if it is true executed
+                 }
+           if(cond2)
+           {
+               // stmt 2 if it is true executed
+           }
+           if(cond3)
+           {
+
+           }
+
+  6.Switch statement :  The case is executed when the condition is true
+   
+   syntax :
+                 switch(expression){
+                    case1 : 
+                             Console.log();
+                    break ;       ------------- break will tell the case to stop here if the case 1 is true
+                    case 2 :
+                            console.log();
+                            break;
+                    Case 3 :
+                            console.log();
+                            break;
+
+                    default:
+                            console.log();
+                 }
+
+ --> Loop control statements / iterative control statements --
+        
+        A loop will iterate multiple times until the conditions
+
+        ex :  var name = "Chandhana";
+             console.log(name);
+             console.log(name);
+             console.log(name);
+             console.log(name);
+             cosnole.log(name);
+
+ 1. for loop  -- the loop is iterated multiple time until the stopping condition
+   
+     syntax : 
+                for(var i=0; // intial value i<=5; // stopping condt i++){
+
+                    // output statement
+                }
+
+          var name = "Rajesh";
+          for(var i=1; i<=10; i++) -- i = 1 -- 1<=10 -- true -- i++ -- 1+1 =2
+          {
+               console.log(name);
+          }
+
+
+ 2.while loop
+
+ 3. do while
+
+ 4 . for each loop
+  
    
     
      
