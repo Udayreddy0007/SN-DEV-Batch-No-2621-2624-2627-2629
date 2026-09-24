@@ -409,11 +409,72 @@ What is JS ? and what it does to a page :
           }
 
 
- 2.while loop
+ 2.while loop 
 
  3. do while
 
  4 . for each loop
+
+ ---> Date : 24 - 09 -26
+
+     -- While loop : the loop will exectue when the condition is True
+
+     syntax :  while(stoping condition i<=) -- condition
+               {
+                    console.log();
+                    incremented (i++);
+               }
+
+     ---  Note : one record we can go with if condition  , to update multiple in sn  we use while loop
+
+
+     --- Do while loop : the loop execute at least once and then condition 
+
+         syntax : do {
+                        console.log();
+                   }while(cond);
+
+
+                   ex :  var a = 3 ;
+                         i=1;
+                         do{
+                             
+                             console.log(a);
+                             i++;
+                         }while(i<=10);
+                    
+                         
+      --- Note : dont define i value inside the Loop{}
+
+
+---> Notification Keyword -- Notification remainder /  a popup on a webbrowser/page
+   
+   -- There are three types of notification keywords 
+    
+     1.alert -- a dialog box with some msg is populated over the page
+        
+        syntax : alert('We are about to enter into intermediate level');
+
+     2.confirm :  a dialog box with some msg is populated over the page
+         
+         syntax :  confirm("hello");
+     
+     3.prompt : a dialog box which allow the user to enter the text 
+        
+        syntax : prompt ("enter your name");
+
+
+---> Array -- group of related / collection of same information
+
+   ex : fruits = ["apple","pineapple","watermelon"];
+          fruits.length = 3
+      
+      ---  indexing each fruit associated with value which it location
+                  the indexing starts from 0
+                  console.log(fruits[1]);
+                  console.log(fruits.length);
+
+                
   
    
     
