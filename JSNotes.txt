@@ -474,6 +474,98 @@ What is JS ? and what it does to a page :
                   console.log(fruits[1]);
                   console.log(fruits.length);
 
+---->Date : 25/9/26
+
+ --> How to find the index of each data that is stored inside an array
+
+
+ var states = ["TS","MH","KN","TN","AP","DE","SK","JK","JM","MP","UP","GA","GJ","BH","RJ","WB"];
+ 
+ for(var i=0; i<states.length; i++){
+     console.log(index + " : " + value);
+ }
+
+
+  ex :  var states = ["TS","MH","KN","TN","AP","DE","SK","JK","JM","MP","UP","GA","GJ","BH","RJ","WB"];
+ 
+         for(var i=0; i<states.length; i++){
+          console.log("Index : "  + i + "value" + states[i]);
+          }
+
+
+--> For-each :  
+
+            syntax of for is  : 
+
+               for (var variablename of variablenames){ --- state of states 
+                    console.log(variableName);
+               }
+
+ ---> Example : for each Loop
+
+
+     var states = ["TS","MH","KN","TN","AP","DE","SK","JK","JM","MP","UP","GA","GJ","BH","RJ","WB"];
+ 
+     for(var state of states)
+     {
+     console.log("The state code is : " + state);
+      }
+
+
+--> Functions in JS :  A block of reusable code 
+
+   syntax : function functionName (parameters names){
+                       
+                       return ; // it gives inn return something
+   
+                }
+                functionName(values of the parameter)
+
+--> 1.function without parameters : 
+
+       function funName(){
+          console.log("hello");
+       }
+       funName(); // function calling
+
+
+       ex : 
+                  function welcome()
+                      {
+                               console.log("Welcome to functions in js");
+                      }
+                           welcome();
+
+     
+
+    2.function with parameters   :
+
+                  function funname(name){
+                    console.log("The name is : " + name)
+                  }  
+                  funnname("uday");
+
+
+                  ex : 
+                       function add(a,b){
+                           return a+b; //does some action
+                       }
+                       add(10,20); 
+    
+     3.function with multiple parameters :
+
+        ex :
+                function add(a,b,c){
+                    return a+b+c; //does some action
+                }
+                add(10,20,30);
+
+
+          ex : 
+                     function names(nam1 , nam2, nam3){
+                         return [nam1,nam2,nam3];
+                     }
+                     names("uday","chandhana","shubhash");
                 
   
    
