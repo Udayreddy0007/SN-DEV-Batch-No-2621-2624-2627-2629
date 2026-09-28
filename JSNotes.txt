@@ -568,8 +568,81 @@ What is JS ? and what it does to a page :
                      names("uday","chandhana","shubhash");
                 
   
+  --> Date : 28/9/26
    
+     --> Method :  It does some action it return the result / value 
+
+     1.Retrun type : it takes the parameters and does some action and gives a result in return 
+      
+         syntax: 
+                   methodName (parameter){
+                    return parameter ;
+
+                   }
+                   methodname(arguments) // the value   
+
+
+
+               Ex    :
+                        class newClass{
+                         Addition (a,b){
+                             return a + b;
+                         }
+                         }
+                         var c1=new newClass();
+                         c1.Addition(1,4);
+
+     2.Void : it does some action but wont any value in return .
+
+              ex :  function display(){
+                           console.log("hello");
+                       }
+                       display(); 
+
+
+
+     --> Class - Blueprint / structure
+          
+          syntax : 
+
+                        class className {
+                            method(){
+
+                            }
+                        } 
+                        object creation
+
+
+   ---> object : instance of class / real output
+
+             var objectname = new  classname();
+             objectname.methodname();
     
+
+    ---> Syntax we prefer it in sn 
+      
+      var objectname = {
+                   
+                   parm1 = valu1 ,
+                   parm2 = valu2 ,
+                   parm3 = valu3
+
+      };
+
+      objectname.parm1;
+
+
+
+
+ex :  
+                   var studentDetails= {
+                     name : "Uday",
+                     id :"21M95A",
+                     Age : 25,
+                     email :"udayreddy@gmail.com"
+                                 };
+                    console.log(studentDetails.name + ','+ studentDetails.id+','+studentDetails.Age+','+studentDetails.emails);
+
      
             
 
