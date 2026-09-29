@@ -643,6 +643,59 @@ ex :
                                  };
                     console.log(studentDetails.name + ','+ studentDetails.id+','+studentDetails.Age+','+studentDetails.emails);
 
+
+--> Date : 29/9/26
+
+----> Function V/s Object 
+
+--> Block of reusable code
+-->  real insatnce / real thhing which we can see
+
+
+
+ ---> syntax : 
+                 var objectName ={
+                    properties  Names: values,
+                    fuctionName : function()
+                    // method to an object 
+                        { 
+                            console.log(this.propertyName)
+    
+                        }
+                 };
+                 objectname.functionName();
+
+---> this is leyword refers to the objectname only when a function is declared inside the object i.e method
+
+  -->     var movies ={
+         directorName:"Rajamouli",
+         heroName:"Prabhas",
+         movieName:"Sprit",
+         movieAction: function(){
+         console.log("The DirectorName is :"+this.directorName);
+         }
+
+      };
+    movies.movieAction();
+
+
+
+
+    ---> SN scripting / Development / Customization
+
+    -- SN as two consoles - 
+    
+     --- 1.client side / browser side / form LVL -- navigate > Client Scripts
+       -- CRUD/CRED
+       -->onLoad() CR--on loading the form
+
+       -->onChange() -CRU -- on changing the fields values 
+       -->onSubmit() - CRU--i can restrict the user from submitting the form until the selected field is filled
+       -->onCelledit() -RU-i can restrict the user from updating the filed on the lsit level
+     
+      -- 2.Server side / Database -- there is  no table -- in the execution history table the script gonna store 4 hr about that 
+                                      scripts will be deleted permanently
+ 
      
             
 
