@@ -695,6 +695,53 @@ ex :
      
       -- 2.Server side / Database -- there is  no table -- in the execution history table the script gonna store 4 hr about that 
                                       scripts will be deleted permanently
+
+
+    ---> Date : 30-9-26
+
+       --> on load -- on loading the form if you want to set the value in a any field , making the field mandatory , alert 
+
+               readonly , hiding the fields these  actions can be done by Onload
+
+          --> g_form // glide form 
+          --> setValue , setMandatory , setDisplay , setVisible , addinfomsg , setReadOnly
+
+         ex 1 : Alert Method
+
+          -->  when the user opens the new record i want to populate a alert msg that is welcome to incident form over my form
+
+            Script : 
+                               function onLoad() {
+    
+                            alert("Welcome to the Incident form");
+   
+                               }
+
+     ex 2 :   when the user opens the new record i want to populate a alert msg that is welcome to incident form on my form
+                      
+            script :   
+                                  function onLoad() {
+    
+                            g_form.addInfoMessage("Welcome to the Incident Form");
+   
+                               }
+                           
+    ex 3 : When the user opens the record i want  to hide the description field 
+      
+       NOTE: inside the method you have to pass the field name not label name 
+               to get field hover to the label name give a right click you will get the field name
+
+            and after passing the name you have to pass a boolean value since i want to 
+            hide i passed false 
+
+
+            script : 
+                                   function onLoad() {
+  
+                                   g_form.setDisplay("description",false);
+
+                                   }
+
  
      
             
