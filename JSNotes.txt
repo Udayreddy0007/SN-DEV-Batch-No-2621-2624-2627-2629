@@ -802,6 +802,49 @@ ex :
                      		g_form.addInfoMessage("None of the group is valid");
                      	   }
                      
+    ---> onSubmit : on submitting the form if want to perform anything  onSubmit 
+
+         
+         Syntax :  
+                  function onSubmit(){
+
+                  }
+
+     User case1  : 
+                 As a system administrator i want to restrict the user from submitting until the description field is filled
+                 after filling the description i dont want him to redirect to the incident table list of record but he can 
+                 able to submit the record and stay on the form only
+
+
+
+
+     Script :   
+                 function onSubmit() {
+                //Type appropriate comment here, and begin script below
+                var des = g_form.getValue("description");
+                if(des==""){
+	             g_form.addErrorMessage("You cannot submit the form until the description field is filled");
+	             return false;
+                }
+             return true ;
+ 
+               }
+
+    
+    ---> onCellEdit : On the sell level we can apply the logic we can restrict the user from updating the things
+
+      User case  : User edits the short description directly from the incident list dont allow it to become empty
+
+    
+       Script : 
+                     if(newValue==''){
+	                alert("Short description field cannot be empty");
+	                callback(false);
+	                return;
+                  }
+                 callback(true); 
+
+    
                      
 
 
