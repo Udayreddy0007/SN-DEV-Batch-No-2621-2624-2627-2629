@@ -844,6 +844,47 @@ ex :
                   }
                  callback(true); 
 
+
+
+--> Date : 06 / 10 / 26 
+        
+        
+        --> User case : Dont allow changing priority to p1 - critical
+
+                User should not change the priority to p1 through the list 
+
+        Script  : 
+
+                  Select the field to priority
+
+                        if(newValue=='1'){
+	                    alert("You cannot cahnge the priority to p1 ");
+	                    callback(false);
+	                    return;
+                      }
+                      callback(true); 
+                    
+
+
+----> Server Side Scripts -- Fetching the data from the server , Db and performing  some logics / Table lvl
+
+       --> DMl operation -- Data manupulation language
+            
+            1. insert(); -- We can create the records
+            2. Update(); -- We can edit the records based upon the conditions update one record , multiple records
+            3.Delete();  -- We can delete records from the table and also delete multiple records
+            4.Query(); -- to fetch / read the data
+            5.Rollback(); -- to undo the operations
+
+    --> Glide Apis - GlideRecord , GlideAggregate -- used for performing the calculation - COUNT, MIN,MAX,AVG,SUM
+
+
+
+
+
+
+                       
+
     
                      
 
