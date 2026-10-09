@@ -880,6 +880,101 @@ ex :
 
 
 
+---> Date : 09/10/26
+
+  --> insert() --  we can write a script to create a record inside any table(Base , custom, child)
+        
+              GlideRecord Api - we use this Api ( glide object) to create the single record and multiple 
+                                 records
+
+
+         Syntax  : 
+                     
+                      varkeyword  variableName = new GlideRecord('tablename'); // selecting the table
+                       variablename.initialize();  // opening and clicking the new button
+                       variableName.fieldname ="";  // filling the fields
+                       variableName.insert();  // submitting the form / saving the Form
+                    gs.info("passing some string"+variableName.number);
+        
+        user case 1 : 
+                            Create a single record in the incident table and set the short_description
+                            and description fields 
+                             
+
+
+             script : 
+                         var gr = new GlideRecord('incident');
+                         gr.initialize();
+                         gr.short_description="creating the first record using server side insert operation";
+                         gr.description="Record has been created";
+                         gr.insert();
+
+        
+        user case 2 : 
+                         
+                     Create a incident with current logged in user
+
+               Script:
+
+                    var gr = new GlideRecord('incident');
+                    gr.initialize();
+                    gr.short_description="creating the first record using server side insert operation";
+                    gr.description="Record has been created";
+                    gr.caller_id = gs.getUserID(); // gs.getUserId() -- for current user only
+                    gr.insert();
+
+ 
+       User case 3 : 
+                           Create a incident  record with a different  caller_id
+
+                Note : For referenced if you want to set the value pass their sys_id
+
+                Script : 
+                          var gr = new GlideRecord('incident');
+                          gr.initialize();
+                          gr.short_description="creating the first record using server side insert operation";
+                          gr.description="Record has been created";
+                          gr.caller_id = "800b174138d089c868d09de320f9833b";
+                          gr.insert();
+                          gs.info("The record number is" + gr.number);
+                    
+        
+        User case 4 : 
+                    
+                        Create a incident record and set the sate to in progress , category to software ,
+                          
+                        subcategory to email issue , imapact is 2 , urgency is 2 , assignement grp - software grp
+                        assigned to is abel tuter
+                        caller is some other person
+
+              Script : 
+                               var gr = new GlideRecord('incident');
+                               gr.initialize();
+                               gr.short_description="creating the first record using server side insert operation";
+                               gr.description="Record has been created";
+                               gr.category="software";
+                               gr.subcategory="email";
+                               gr.state="2";
+                               gr.impact="2";
+                               gr.urgency="2";
+                               gr.assignment_group="8a4dde73c6112278017a6a4baf547aa7";
+                               gr.assigned_to="5137153cc611227c000bbd1bd8cd2007";
+                               gr.caller_id="3e82abf03710200044e0bfc8bcbe5d12";
+                               gr.insert();
+                               gs.info("The record is created and the number is :"+gr.number);
+
+
+                            
+
+                
+
+    
+                          
+            
+
+                     
+
+
 
 
 
