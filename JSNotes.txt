@@ -964,6 +964,62 @@ ex :
                                gs.info("The record is created and the number is :"+gr.number);
 
 
+---> Date : 12/10/26
+
+      User Case 5 :   i want to create multiple records with some short description , description , category - software ,
+                      imapact is 2 , urgency-2
+
+            
+            script : 
+                      
+                        var gr = new GlideRecord('incident');
+                        for(var i=1; i<=10; i++){
+                        	gr.initialize();
+                        	gr.short_description="inserting the 10 short description";
+                        	gr.description="multiple records has been created";
+                        	gr.impact="2";
+                        	gr.urgency="2";
+                        	gr.category="software";
+                        	gr.insert();
+                        	gs.info("The record number"+gr.number);
+                        }
+
+
+    
+    ---> Update() : updating the particular field if the condition match
+
+         if your are updating a single record use if condition 
+         if your are updating multiple records use while Loop
+
+
+    User case 1 :  i want to set the description field to some value on one record
+
+       Script : 
+                           var upInc = new GlideRecord('incident');
+                         if(upInc.get("sys_id","1c832706732023002728660c4cf6a7b9")){
+                         	upInc.description="The category has been selected to hardware";
+                         	upInc.update();
+                         }
+                
+
+   User case 2 : When the p3 and category is software record should be assigned to a user 
+    
+    Note : to apply the filters on the table we are using addQuery("field name","field value")
+  
+    Script : 
+
+                  var upInc = new GlideRecord('incident');
+                  upInc.addQuery("category","software"); // will apply the filter
+                  upInc.addQuery("priority","3");
+                  upInc.query(); // fetch the records
+                  while(upInc.next()){
+                     upInc.assigned_to="800b174138d089c868d09de320f9833b";
+                     upInc.updateMultiple();
+                  }
+
+        
+
+
                             
 
                 
