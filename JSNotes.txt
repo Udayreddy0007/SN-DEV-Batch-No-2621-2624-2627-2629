@@ -1012,10 +1012,57 @@ ex :
                   upInc.addQuery("category","software"); // will apply the filter
                   upInc.addQuery("priority","3");
                   upInc.query(); // fetch the records
-                  while(upInc.next()){
+                  
                      upInc.assigned_to="800b174138d089c868d09de320f9833b";
                      upInc.updateMultiple();
-                  }
+                  
+
+
+
+----> Date : 13/10/26
+
+
+     --- User case 3 : I want to get the total count of incidents based up on the filters
+
+        Script : 
+                     
+                     var upInc = new GlideRecord('incident');
+                     upInc.addQuery("active",true);
+	                 upInc.addQuery("priority","1"); // will apply the filter
+                     upInc.query(); // fetch the records
+                      upInc.short_description="tesing the active records";
+                        upInc.updateMultiple();
+	                    gs.info("The no of records has been updated"+upInc.getRowCount());
+                 
+
+
+   --- User case 4 : If the caller is abel tuter i just want to update the short_description field
+
+          Script : 
+                    
+                        var upInc = new GlideRecord('incident');
+                       upInc.addQuery("caller_id","62826bf03710200044e0bfc8bcbe5df1");
+	                   upInc.query();
+	                   while(upInc.next()){
+	                   	upInc.short_description="The caller is selected to abel tuter";
+	                   	upInc.update();
+	                   }
+	                   
+	                      gs.info("The no of records has been updated"+upInc.getRowCount());
+
+
+
+User case 5 :  Update the abel tuter company name 
+            
+        Script : 
+                     var userRec = new GlideRecord("sys_user");
+                     if(userRec.get("user_name","abel.tuter"))
+                     userRec.company="86c1f3193790200044e0bfc8bcbe5d95";
+                     userRec.update();
+                     gs.info("The script is running");
+             
+
+                  
 
         
 
