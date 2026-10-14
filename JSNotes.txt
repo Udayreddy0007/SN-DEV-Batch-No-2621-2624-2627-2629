@@ -1060,7 +1060,49 @@ User case 5 :  Update the abel tuter company name
                      userRec.company="86c1f3193790200044e0bfc8bcbe5d95";
                      userRec.update();
                      gs.info("The script is running");
+    
+
+---> Date :14 /10/26
+
+
+  --EncodedQuery -- we use this method to apply multiple filters
+
+  Script : 
+                 var rec = new GlideRecord('incident');
+rec.addEncodedQuery("active=true^category=software^incident_state=2^descriptionLIKEmultiple records has been created");
+rec.query();
+rec.state="3";
+rec.updateMultiple();
+gs.print("The no of records has been updated :"+rec.getRowCount());
              
+   --Delete() : Deleting the multiple records from the table by executing a script 
+               and we can also delete a single record
+
+
+   -- deleteMultiple is the method used for deleting multiple records
+
+   Script : 
+         
+             var rec = new GlideRecord('incident');
+rec.addEncodedQuery("active=true^category=software^incident_state=2^descriptionLIKEmultiple records has been created");
+rec.query();
+rec.deleteMultiple();
+
+
+-- deleteRecord -- this method is used to delete one record
+ 
+   Note :please dont use delete Method
+
+   script : 
+                 var rec = new GlideRecord('incident');
+rec.get("sys_id","b532ecd3c33b0b94c99b113ed4013117");
+rec.deleteRecord();
+
+
+--- GlideAggregate is  a api we use to get the COUNT , MIN , MAX , SUM , AVG
+   
+
+
 
                   
 
