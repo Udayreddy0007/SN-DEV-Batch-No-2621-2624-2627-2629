@@ -1100,6 +1100,124 @@ rec.deleteRecord();
 
 
 --- GlideAggregate is  a api we use to get the COUNT , MIN , MAX , SUM , AVG
+
+
+---> Date  : 15/10/26 
+ 
+  
+   --> To perform mathematics and statistics on the table we use glideaggregate
+       aggregate functions 
+
+   1.COUNT : we use this function to get the total count of records in a table
+
+        syntax :
+            
+              var ga = new GlideAggregate('tablename');
+              ga.addAggregate('COUNT');
+              ga.addQuery('fieldname','fieldValue');
+              ga.query(); // count 
+              if(ga.next()){
+               var result = ga.getAggregate('COUNT');
+               gs.info(result);
+              }
+
+   --> User case 1 : Getting the count of records whose priority is 1 
+
+         Script : 
+              
+                   
+                var inCount = new GlideAggregate('incident');
+                inCount.addAggregate('COUNT');
+                inCount.addQuery('priority','1');
+                inCount.query();
+                if(inCount.next()){
+                	var result = inCount.getAggregate('COUNT');
+                	gs.info("The total no of records in the table is : "+result);
+                }
+
+
+      --> groupby() -- it will apply the filter on the field which has choices 
+          
+
+          User case 2 : I want to get no of records for each priority
+
+            script : 
+                  
+                   var inCount = new GlideAggregate('incident');
+                  inCount.addAggregate('COUNT');
+                  inCount.groupBy('priority');
+                  inCount.query();
+                  while(inCount.next()){
+                  	var pr = inCount.getDisplayValue('priority');
+                  	var result = inCount.getAggregate('COUNT');
+                  	gs.info("The total no of records in the table is : "+pr+':' +result);
+                  }
+
+
+
+
+    ---> MIN() :  To find the minimum value of the  paticular we use the MIN Aggregate function
+
+
+       -- setGroup(false) :  it  will give the minimum count and block the multiple min values
+
+
+       User case 1 :  i want to get the min number in the incident table
+
+          Script :
+                  var inCount = new GlideAggregate('incident');
+                     inCount.addAggregate('MIN','number');
+                     inCount.setGroup(false);
+                     inCount.query();
+                     while(inCount.next()){
+                     	
+                     	var result = inCount.getAggregate('MIN','number');
+                     	gs.info("The MIN number is : " +result);
+                     }
+
+
+         User Case 2 : Getting the min cost of the ci's
+
+
+                    var ciCost = new GlideAggregate('cmdb_ci');
+                     ciCost.addAggregate('MIN','cost');
+                     ciCost.setGroup(false);
+                     ciCost.query();
+                      while(ciCost.next()){
+                      	
+                      	var result = ciCost.getAggregate('MIN','cost');
+                      	gs.info("The total no of records in the table is : " +result);
+                  }
+
+   --> MAX () : Getting the maximum value of the tables
+
+       
+           User case1:  get the maximum cost of ci's
+
+             script : 
+                   var ciMax = new GlideAggregate('cmdb_ci');
+                   ciMax.addAggregate('MAX','cost');
+                   ciMax.setGroup(false);
+                   ciMax.query();
+                   while(ciMax.next()){
+                   	
+                   	var result = ciMax.getAggregate('MAX','cost');
+                   	gs.info("The Maximum cost of ci's is : " +result);
+                   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
 
 
