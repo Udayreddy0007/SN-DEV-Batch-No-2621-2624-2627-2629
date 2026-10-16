@@ -1207,12 +1207,91 @@ rec.deleteRecord();
 
 
 
+-->  Date : 16/10/26
+
+ 
+  ---> SUM() :  To find the total cost we will be using sum
+   
+    
+   --> User case :  Find the total  cost of ci's 
+    
+        script : 
+          
+          var ciCost = new GlideAggregate('cmdb_ci');
+                   ciCost.addAggregate('SUM','cost');
+                   ciCost.setGroup(false);
+                   ciCost.query();
+                   while(ciCost.next()){
+					var result = ciCost.getAggregate('SUM','cost');
+					gs.info("The total  cost of ci's is : " +result);
+                   }
+
+
+    --->  AVG() :  Finding the mid value (AVG cost) of the ci's
+
+      
+        User case :   Find the Average cost of ci's   
+
+          script :
+                   var ciAvg = new GlideAggregate('cmdb_ci');
+                   ciAvg.addAggregate('AVG','cost');
+                   ciAvg.setGroup(false);
+                   ciAvg.query();
+                   while(ciAvg.next()){
+				     	var result = ciAvg.getAggregate('AVG','cost');
+				     	gs.info("The Average cost of ci's is : " +result);
+                   }
+   
+                    
+
+----> Business rule :(server side scripts)  
+    
+       --> We write business based up on the business requirements 
+            serverside scripts -- GlideRecord , GlideAggregate , g_scratchpad
 
 
 
+     --> In servicenow we have 4 types of Business rule 
+         
+         1. Before
+         2. after
+         3. Async
+         4. display
 
+   ---> Before Business Rule : it will execute before the data(Record) is submitted to the DB(Table)
 
+ 
+     -->User case 1 :  When the category is software set the assignment group to Software
 
+         Before Br - Insert / update
+            Script : 
+                      
+
+                  if(current.category=="software"){
+                 current.assignment_group="8a4dde73c6112278017a6a4baf547aa7";
+                                   }
+
+   --> User case 2 : When the description is empty want to set the description to some value
+
+       
+           Before - Insert / Update
+    
+       Script : 
+
+           if(current.description.nil()){
+	        	current.description="The description field is empty and testing the Before BR";
+	        }
+             
+
+---> User case 3 : 
+
+        Before - Insert / Update
+
+        Script  : 
+    
+              if(current.assigned_to.nil()){
+	        	current.assigned_to=gs.getUserID();
+	        }
 
 
 
