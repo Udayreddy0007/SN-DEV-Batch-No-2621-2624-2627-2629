@@ -1294,6 +1294,60 @@ rec.deleteRecord();
 	        }
 
 
+---> User case 4 : 
+     
+        When the record is about to  save into the DB if the category is software and description field is empty i just want to 
+        restrict the user from saving/ submitting the record to the DB 
+
+
+        Script : 
+          
+               	if(current.category=='software'&& current.description.nil()){
+	        	gs.addErrorMessage('descrisption field should be filled');
+             	
+                current.setAbortAction(true);
+	             }
+
+
+
+----> Date : 22/10/26 
+ 
+             
+        ----> After BR -- After the record has written to the DB the script will execute
+
+
+           User case 1 : When the user create a record in the incident table simultaniosly create a problem
+                          record in the problem table
+
+                    After BR -Insert , Update
+
+            
+            script : 
+                      
+                        
+	                   var gr = new GlideRecord('problem');
+	                   gr.initialize();
+	                   gr.description=current.description + current.number;
+	                   gr.short_description=current.short_description;
+	                   gr.insert();
+
+           User case 2 : When the user create a record in the incident table simultaniosly create a problem
+                          record in the problem table and also while creating therecord set up some sleep time 10sec 
+
+                 Note : gs.sleep(10000) - 10sec 
+                   after the 10sec only the record is submitted
+
+                   After BR -Insert , Update
+
+            Script : 
+                
+                    
+	                   var gr = new GlideRecord('problem');
+	                   gr.initialize();
+	                   gs.sleep(10000);
+	                   gr.description=current.description + current.number;
+	                   gr.short_description=current.short_description;
+	                   gr.insert();
 
 
 
