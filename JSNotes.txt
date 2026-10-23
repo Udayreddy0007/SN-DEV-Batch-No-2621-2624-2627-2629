@@ -1313,7 +1313,7 @@ rec.deleteRecord();
 ----> Date : 22/10/26 
  
              
-        ----> After BR -- After the record has written to the DB the script will execute
+        ----> After BR -- After the record has written to the DB the script will execute  with some waiting period
 
 
            User case 1 : When the user create a record in the incident table simultaniosly create a problem
@@ -1349,6 +1349,82 @@ rec.deleteRecord();
 	                   gr.short_description=current.short_description;
 	                   gr.insert();
 
+
+  ----> Date : 23/10/26 
+
+     ---> Async --  After the record has written to the DB the script will executed without any waiting period
+
+         
+           User case 1 : When the user create a record in the incident table simultaniosly create a problem
+                          record in the problem table and also while creating the record set up some sleep time 10sec
+                          see weather is it setting the time or not
+
+                
+                Script : 
+                       
+                          Async BR -Insert , Update
+
+                            var gr = new GlideRecord('problem');
+	                         gr.initialize();
+	                         gs.sleep(10000);
+	                         gr.description=current.description + current.number;
+	                         gr.short_description=current.short_description;
+	                         gr.insert();
+
+
+----> Display() -- A display BR executes on the server(DB) when a form is requested  , before it is displayed to the user 
+                   it is commonly used to send the server-side information to client scripts using 
+                    g_scratchpad .
+
+
+        User case 1 : When the state is  changed some other value i want to populate an alert 
+           
+               
+                Display BR
+              
+              Script :
+                       
+                        	g_scratchpad.msg="The Display BR is working ";
+
+               
+                Client Script -- onChange field - state 
+
+
+                   Script : 
+                       
+                           alert (g_scratchpad.msg);
+
+
+
+            User case 2 : When the caller is selected / Changed i just want to populate a infomesssage with his email , 
+                         Company , department , user_name
+
+                 
+                
+                Display BR
+               
+                Script : 
+    
+                    	var caller = current.caller_id.getRefRecord();
+	                      g_scratchpad.fullName=caller.getValue('user_name');
+	                      g_scratchpad.email=caller.getValue('email');
+	                      g_scratchpad.cmpy=caller.getValue('company');
+	                      g_scratchpad.dpt=caller.getValue('department');
+
+            
+            Client script : onChange field - caller 
+
+              g_form.addInfoMessage("Caller name :" + g_scratchpad.fullName +'\n'+"email address - "+g_scratchpad.email+'\n'+"Company Name -"
+                                     +g_scratchpad.cmpy+'\n'+"Department name - "+g_scratchpad.dpt);
+                
+
+
+                
+
+                            
+
+
+                       
 
 
    
