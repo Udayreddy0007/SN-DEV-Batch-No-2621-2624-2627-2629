@@ -1419,7 +1419,50 @@ rec.deleteRecord();
                 
 
 
+
+----> Date : 26/10/26 
+
+
+   --- Script include & Glide Ajax  : 
+      
+        -- Script include is a server side  reusable function / a container of functions  lives on server Side
+           --Glide ajax will allow the user to call that reusable server side function on the client side
+
+              (client callable via client scripts)
+
+
+
+         -- i just want to make a connection between two things (script include and client side )
                 
+
+
+         Script include : 
+            
+                var Test = Class.create();   // creating a class
+                Test.prototype = Object.extendsObject(AbstractAjaxProcessor, {       // object real world instance of class
+                
+                    getMessage: function(){
+                	
+                		return "hello connection is successful";
+                
+                	},
+                
+                    type: 'Test'
+                });
+             
+               
+
+
+       GLide Ajax  :   onLoad , any table
+          
+          var ga = new GlideAjax('Test');   // calls the scriptinclude by its name 
+           ga.addParam('sysparm_name','getMessage');   // specifies which serverside method to excecute
+        
+           ga.getXMLAnswer(function(answer) 
+           {  
+	        g_form.addInfoMessage(answer);  // displays the answer on the form
+        
+           });
 
                             
 
