@@ -1464,9 +1464,65 @@ rec.deleteRecord();
         
            });
 
-                            
+   
+   ---> Date : 27/10/26
+
+     
+     --> User case 2 : When the caller is selected on the form i just want to get his company name and Department name
+
+         
+         Note: make sure your script include name is same as class name 
+             
+
+         Script Include : 
+            
+
+                             var CompanyDetails = Class.create();
+              CompanyDetails.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+              
+              
+                 getCompanyName: function(){
+              
+              	var caller_id = this.getParameter('sysparm_caller_id'); //"abel tuter"
+              	
+              	var userGr = new GlideRecord('sys_user');
+              
+              	if(userGr.get(caller_id)){   // usertable.abeltuter-- company namer
+              
+              		var company= userGr.getDisplayValue('company');
+              		var dept = userGr.getDisplayValue('department');
+              		return("The caller company name is : "+company+'\n'+"The caller Departmentname :" + dept);
+              	}
+              	return 'company not found';
+              	
+              
+                 },
+              
+              
+                  type: 'CompanyDetails'
+              }); 
 
 
+
+
+Client Script : 
+    
+    onChange - Caller field 
+
+      Script : 
+        
+
+            var ga = new GlideAjax('CompanyDetails');
+              ga.addParam("sysparm_name","getCompanyName");
+              ga.addParam('sysparm_caller_id',newValue); // giving the input  to  server side 
+              ga.getXML(getData);   // send  the request and invokes callback when the response arrives
+             
+              function getData(response) // it conatins xml response from the server
+               {
+             	var answer = response.responseXML.documentElement.getAttribute('answer');  // extratcing the returned value
+             	alert(answer); // displaying on the form 
+             
+              }
                        
 
 
