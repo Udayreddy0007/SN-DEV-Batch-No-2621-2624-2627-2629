@@ -1465,7 +1465,7 @@ rec.deleteRecord();
            });
 
    
-   ---> Date : 27/10/26
+ ---> Date : 27/10/26
 
      
      --> User case 2 : When the caller is selected on the form i just want to get his company name and Department name
